@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_suggested: 2015-10-25
+  date_register: 2015-10-25
+  dosis_vacune: MyString
+  status: MyString
+  weight_picture: 1
+  height_picture: 1
+  type_picture: MyString
+  picture: MyString
+  Medical_center_id: 
+  Vaccine_plan_id: 
+  Child_id: 
+
+two:
+  date_suggested: 2015-10-25
+  date_register: 2015-10-25
+  dosis_vacune: MyString
+  status: MyString
+  weight_picture: 1
+  height_picture: 1
+  type_picture: MyString
+  picture: MyString
+  Medical_center_id: 
+  Vaccine_plan_id: 
+  Child_id: 

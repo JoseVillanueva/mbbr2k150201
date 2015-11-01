@@ -1,0 +1,60 @@
+<%- model_class = MedicalHistory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:date_register) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:weight_picture) %></th>
+      <th><%= model_class.human_attribute_name(:height_picture) %></th>
+      <th><%= model_class.human_attribute_name(:type_picture) %></th>
+      <th><%= model_class.human_attribute_name(:picture) %></th>
+      <th><%= model_class.human_attribute_name(:medical_insurance_id) %></th>
+      <th><%= model_class.human_attribute_name(:medical_center_id) %></th>
+      <th><%= model_class.human_attribute_name(:medicine_id) %></th>
+      <th><%= model_class.human_attribute_name(:medical_exam_id) %></th>
+      <th><%= model_class.human_attribute_name(:doctor_id) %></th>
+      <th><%= model_class.human_attribute_name(:child_id) %></th>
+      <th><%= model_class.human_attribute_name(:health_problem_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @medical_histories.each do |medical_history| %>
+      <tr>
+        <td><%= link_to medical_history.id, medical_history_path(medical_history) %></td>
+        <td><%= medical_history.date_register %></td>
+        <td><%= medical_history.description %></td>
+        <td><%= medical_history.weight_picture %></td>
+        <td><%= medical_history.height_picture %></td>
+        <td><%= medical_history.type_picture %></td>
+        <td><%= medical_history.picture %></td>
+        <td><%= medical_history.medical_insurance_id %></td>
+        <td><%= medical_history.medical_center_id %></td>
+        <td><%= medical_history.medicine_id %></td>
+        <td><%= medical_history.medical_exam_id %></td>
+        <td><%= medical_history.doctor_id %></td>
+        <td><%= medical_history.child_id %></td>
+        <td><%= medical_history.health_problem_id %></td>
+        <td><%=l medical_history.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_medical_history_path(medical_history), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      medical_history_path(medical_history),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_medical_history_path,
+            :class => 'btn btn-primary' %>

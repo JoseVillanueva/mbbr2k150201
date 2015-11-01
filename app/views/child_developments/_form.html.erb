@@ -1,0 +1,10 @@
+<%= simple_form_for @child_development, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@child_development[:name]) %>
+  <%= f.input :months %>
+  <%= error_span(@child_development[:months]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                child_developments_path, :class => 'btn btn-default' %>
+<% end %>

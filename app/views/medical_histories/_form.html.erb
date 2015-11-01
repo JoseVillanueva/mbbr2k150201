@@ -1,0 +1,32 @@
+<%= simple_form_for @medical_history, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :date_register %>
+  <%= error_span(@medical_history[:date_register]) %>
+  <%= f.input :description %>
+  <%= error_span(@medical_history[:description]) %>
+  <%= f.input :weight_picture %>
+  <%= error_span(@medical_history[:weight_picture]) %>
+  <%= f.input :height_picture %>
+  <%= error_span(@medical_history[:height_picture]) %>
+  <%= f.input :type_picture %>
+  <%= error_span(@medical_history[:type_picture]) %>
+  <%= f.input :picture %>
+  <%= error_span(@medical_history[:picture]) %>
+  <%= f.input :medical_insurance_id %>
+  <%= error_span(@medical_history[:medical_insurance_id]) %>
+  <%= f.input :medical_center_id %>
+  <%= error_span(@medical_history[:medical_center_id]) %>
+  <%= f.input :medicine_id %>
+  <%= error_span(@medical_history[:medicine_id]) %>
+  <%= f.input :medical_exam_id %>
+  <%= error_span(@medical_history[:medical_exam_id]) %>
+  <%= f.input :doctor_id %>
+  <%= error_span(@medical_history[:doctor_id]) %>
+  <%= f.input :child_id %>
+  <%= error_span(@medical_history[:child_id]) %>
+  <%= f.input :health_problem_id %>
+  <%= error_span(@medical_history[:health_problem_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                medical_histories_path, :class => 'btn btn-default' %>
+<% end %>

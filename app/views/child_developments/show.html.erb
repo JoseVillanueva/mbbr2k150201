@@ -1,0 +1,21 @@
+<%- model_class = ChildDevelopment -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @child_development.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:months) %>:</strong></dt>
+  <dd><%= @child_development.months %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              child_developments_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_child_development_path(@child_development), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              child_development_path(@child_development),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

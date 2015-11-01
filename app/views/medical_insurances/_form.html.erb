@@ -1,0 +1,18 @@
+<%= simple_form_for @medical_insurance, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nom_seguro %>
+  <%= error_span(@medical_insurance[:nom_seguro]) %>
+  <%= f.input :name %>
+  <%= error_span(@medical_insurance[:name]) %>
+  <%= f.input :tax_identification %>
+  <%= error_span(@medical_insurance[:tax_identification]) %>
+  <%= f.input :address %>
+  <%= error_span(@medical_insurance[:address]) %>
+  <%= f.input :website %>
+  <%= error_span(@medical_insurance[:website]) %>
+  <%= f.input :email %>
+  <%= error_span(@medical_insurance[:email]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                medical_insurances_path, :class => 'btn btn-default' %>
+<% end %>

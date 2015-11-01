@@ -1,0 +1,46 @@
+<%- model_class = MedicalInsurance -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nom_seguro) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:tax_identification) %></th>
+      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:website) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @medical_insurances.each do |medical_insurance| %>
+      <tr>
+        <td><%= link_to medical_insurance.id, medical_insurance_path(medical_insurance) %></td>
+        <td><%= medical_insurance.nom_seguro %></td>
+        <td><%= medical_insurance.name %></td>
+        <td><%= medical_insurance.tax_identification %></td>
+        <td><%= medical_insurance.address %></td>
+        <td><%= medical_insurance.website %></td>
+        <td><%= medical_insurance.email %></td>
+        <td><%=l medical_insurance.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_medical_insurance_path(medical_insurance), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      medical_insurance_path(medical_insurance),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_medical_insurance_path,
+            :class => 'btn btn-primary' %>

@@ -1,0 +1,32 @@
+<%= simple_form_for @vaccine_child, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :date_suggested %>
+  <%= error_span(@vaccine_child[:date_suggested]) %>
+  <%= f.input :date_register %>
+  <%= error_span(@vaccine_child[:date_register]) %>
+  <%= f.input :dosis_vacune %>
+  <%= error_span(@vaccine_child[:dosis_vacune]) %>
+  <%= f.input :status %>
+  <%= error_span(@vaccine_child[:status]) %>
+  <%= f.input :weight_picture %>
+  <%= error_span(@vaccine_child[:weight_picture]) %>
+  <%= f.input :height_picture %>
+  <%= error_span(@vaccine_child[:height_picture]) %>
+  <%= f.input :type_picture %>
+  <%= error_span(@vaccine_child[:type_picture]) %>
+  <%= f.input :picture %>
+  <%= error_span(@vaccine_child[:picture]) %>
+  <%= f.input :medical_center_id %>
+  <%= error_span(@vaccine_child[:medical_center_id]) %>
+  <%= f.input :vaccine_plan_id %>
+  <%= error_span(@vaccine_child[:vaccine_plan_id]) %>
+  <%= f.input :child_id %>
+  <%= error_span(@vaccine_child[:child_id]) %>
+
+
+
+
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                vaccine_children_path, :class => 'btn btn-default' %>
+<% end %>

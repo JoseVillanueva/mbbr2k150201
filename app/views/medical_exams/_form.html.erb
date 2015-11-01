@@ -1,0 +1,10 @@
+<%= simple_form_for @medical_exam, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@medical_exam[:name]) %>
+  <%= f.input :exam_type %>
+  <%= error_span(@medical_exam[:exam_type]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                medical_exams_path, :class => 'btn btn-default' %>
+<% end %>

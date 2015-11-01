@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_contol: 2015-10-25
+  weight: MyString
+  size: MyString
+  head_circunference: MyString
+  Child_id: 
+  Child_development_id: 
+  Medical_center_id: 
+  Doctor_id: 
+
+two:
+  date_contol: 2015-10-25
+  weight: MyString
+  size: MyString
+  head_circunference: MyString
+  Child_id: 
+  Child_development_id: 
+  Medical_center_id: 
+  Doctor_id: 

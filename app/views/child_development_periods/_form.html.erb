@@ -1,0 +1,22 @@
+<%= simple_form_for @child_development_period, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :date_contol %>
+  <%= error_span(@child_development_period[:date_contol]) %>
+  <%= f.input :weight %>
+  <%= error_span(@child_development_period[:weight]) %>
+  <%= f.input :size %>
+  <%= error_span(@child_development_period[:size]) %>
+  <%= f.input :head_circunference %>
+  <%= error_span(@child_development_period[:head_circunference]) %>
+  <%= f.input :child_id %>
+  <%= error_span(@child_development_period[:child_id]) %>
+  <%= f.input :child_development_id %>
+  <%= error_span(@child_development_period[:child_development_id]) %>
+  <%= f.input :medical_center_id %>
+  <%= error_span(@child_development_period[:medical_center_id]) %>
+  <%= f.input :doctor_id %>
+  <%= error_span(@child_development_period[:doctor_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                child_development_periods_path, :class => 'btn btn-default' %>
+<% end %>

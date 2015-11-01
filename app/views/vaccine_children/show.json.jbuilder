@@ -1,0 +1,1 @@
+json.extract! @vaccine_child, :id, :date_suggested, :date_register, :dosis_vacune, :status, :weight_picture, :height_picture, :type_picture, :picture, :Medical_center_id, :Vaccine_plan_id, :Child_id, :created_at, :updated_at

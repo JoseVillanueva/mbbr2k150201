@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date_of_birth: 2015-10-25
+  time_of_birth: 2015-10-25 03:46:33
+  weight: MyString
+  size: MyString
+  idcard: MyString
+  Customer_id: 
+  Medical_insurance_id: 
+  Blood_type_id: 
+  Birth_type_id: 
+  Medical_center_id: 
+  Doctor_id: 
+
+two:
+  name: MyString
+  date_of_birth: 2015-10-25
+  time_of_birth: 2015-10-25 03:46:33
+  weight: MyString
+  size: MyString
+  idcard: MyString
+  Customer_id: 
+  Medical_insurance_id: 
+  Blood_type_id: 
+  Birth_type_id: 
+  Medical_center_id: 
+  Doctor_id: 

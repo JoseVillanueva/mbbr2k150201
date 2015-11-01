@@ -1,0 +1,22 @@
+<%= simple_form_for @customer, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :idcard %>
+  <%= error_span(@customer[:idcard]) %>
+  <%= f.input :name %>
+  <%= error_span(@customer[:name]) %>
+  <%= f.input :last_name %>
+  <%= error_span(@customer[:last_name]) %>
+  <%= f.input :sec_last_name %>
+  <%= error_span(@customer[:sec_last_name]) %>
+  <%= f.input :date_of_birth %>
+  <%= error_span(@customer[:date_of_birth]) %>
+  <%= f.input :address %>
+  <%= error_span(@customer[:address]) %>
+  <%= f.input :email %>
+  <%= error_span(@customer[:email]) %>
+  <%= f.association :company %>
+  <%= error_span(@customer[:company_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                customers_path, :class => 'btn btn-default' %>
+<% end %>

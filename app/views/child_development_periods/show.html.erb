@@ -1,0 +1,33 @@
+<%- model_class = ChildDevelopmentPeriod -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:date_contol) %>:</strong></dt>
+  <dd><%= @child_development_period.date_contol %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
+  <dd><%= @child_development_period.weight %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:size) %>:</strong></dt>
+  <dd><%= @child_development_period.size %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:head_circunference) %>:</strong></dt>
+  <dd><%= @child_development_period.head_circunference %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:child_id) %>:</strong></dt>
+  <dd><%= @child_development_period.child_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:child_development_id) %>:</strong></dt>
+  <dd><%= @child_development_period.child_development_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:medical_center_id) %>:</strong></dt>
+  <dd><%= @child_development_period.medical_center_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:doctor_id) %>:</strong></dt>
+  <dd><%= @child_development_period.doctor_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              child_development_periods_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_child_development_period_path(@child_development_period), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              child_development_period_path(@child_development_period),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

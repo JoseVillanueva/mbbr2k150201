@@ -1,0 +1,10 @@
+<%= simple_form_for @vaccine, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@vaccine[:name]) %>
+  <%= f.input :composition %>
+  <%= error_span(@vaccine[:composition]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                vaccines_path, :class => 'btn btn-default' %>
+<% end %>

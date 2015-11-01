@@ -1,0 +1,58 @@
+<%- model_class = Child -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:date_of_birth) %></th>
+      <th><%= model_class.human_attribute_name(:time_of_birth) %></th>
+      <th><%= model_class.human_attribute_name(:weight) %></th>
+      <th><%= model_class.human_attribute_name(:size) %></th>
+      <th><%= model_class.human_attribute_name(:idcard) %></th>
+      <th><%= model_class.human_attribute_name(:customer_id) %></th>
+      <th><%= model_class.human_attribute_name(:medical_insurance_id) %></th>
+      <th><%= model_class.human_attribute_name(:blood_type_id) %></th>
+      <th><%= model_class.human_attribute_name(:birth_type_id) %></th>
+      <th><%= model_class.human_attribute_name(:medical_center_id) %></th>
+      <th><%= model_class.human_attribute_name(:doctor_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @children.each do |child| %>
+      <tr>
+        <td><%= link_to child.id, child_path(child) %></td>
+        <td><%= child.name %></td>
+        <td><%= child.date_of_birth %></td>
+        <td><%= child.time_of_birth %></td>
+        <td><%= child.weight %></td>
+        <td><%= child.size %></td>
+        <td><%= child.idcard %></td>
+        <td><%= child.customer_id %></td>
+        <td><%= child.medical_insurance_id %></td>
+        <td><%= child.blood_type_id %></td>
+        <td><%= child.birth_type_id %></td>
+        <td><%= child.medical_center_id %></td>
+        <td><%= child.doctor_id %></td>
+        <td><%=l child.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_child_path(child), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      child_path(child),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_child_path,
+            :class => 'btn btn-primary' %>
