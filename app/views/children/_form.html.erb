@@ -1,4 +1,17 @@
 <%= simple_form_for @child, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.association :customer %>
+  <%= error_span(@child[:customer_id]) %>
+
+  <%= f.association :blood_type %>
+  <%= error_span(@child[:blood_type_id]) %>
+
+  <%= f.association :birth_type %>
+  <%= error_span(@child[:birth_type_id]) %>
+
+
+  <%= f.input :idcard %>
+  <%= error_span(@child[:idcard]) %>
   <%= f.input :name %>
   <%= error_span(@child[:name]) %>
   <%= f.input :date_of_birth %>
@@ -9,20 +22,16 @@
   <%= error_span(@child[:weight]) %>
   <%= f.input :size %>
   <%= error_span(@child[:size]) %>
-  <%= f.input :idcard %>
-  <%= error_span(@child[:idcard]) %>
-  <%= f.input :customer_id %>
-  <%= error_span(@child[:customer_id]) %>
-  <%= f.input :medical_insurance_id %>
-  <%= error_span(@child[:medical_insurance_id]) %>
-  <%= f.input :blood_type_id %>
-  <%= error_span(@child[:blood_type_id]) %>
-  <%= f.input :birth_type_id %>
-  <%= error_span(@child[:birth_type_id]) %>
-  <%= f.input :medical_center_id %>
+
+  <%= f.association :medical_center %>
   <%= error_span(@child[:medical_center_id]) %>
-  <%= f.input :doctor_id %>
+
+  <%= f.association :doctor %>
   <%= error_span(@child[:doctor_id]) %>
+  
+  <%= f.association :medical_insurance %>
+  <%= error_span(@child[:medical_insurance_id]) %>
+  
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
