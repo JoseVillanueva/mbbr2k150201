@@ -69,6 +69,6 @@ class VaccinePlansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vaccine_plan_params
-      params.require(:vaccine_plan).permit(:nmes, :Vaccine_id)
+      params.require(:vaccine_plan).permit(:nmes, :vaccine_id)
     end
 end

@@ -1,12 +1,14 @@
 <%= simple_form_for @doctor, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.association :medical_center %>
+  <%= error_span(@doctor[:medical_center_id]) %>
+
   <%= f.input :name %>
   <%= error_span(@doctor[:name]) %>
   <%= f.input :last_name %>
   <%= error_span(@doctor[:last_name]) %>
   <%= f.input :sec_last_name %>
   <%= error_span(@doctor[:sec_last_name]) %>
-  <%= f.input :medical_center_id %>
-  <%= error_span(@doctor[:medical_center_id]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
