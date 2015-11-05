@@ -6,15 +6,17 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:child_development_id) %></th>
       <th><%= model_class.human_attribute_name(:date_contol) %></th>
       <th><%= model_class.human_attribute_name(:weight) %></th>
       <th><%= model_class.human_attribute_name(:size) %></th>
       <th><%= model_class.human_attribute_name(:head_circunference) %></th>
-      <th><%= model_class.human_attribute_name(:child_id) %></th>
-      <th><%= model_class.human_attribute_name(:child_development_id) %></th>
-      <th><%= model_class.human_attribute_name(:medical_center_id) %></th>
       <th><%= model_class.human_attribute_name(:doctor_id) %></th>
+<!--
+      <th><%= model_class.human_attribute_name(:child_id) %></th>
+      <th><%= model_class.human_attribute_name(:medical_center_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
+-->
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -23,14 +25,16 @@
       <tr>
         <td><%= link_to child_development_period.id, child_development_period_path(child_development_period) %></td>
         <td><%= child_development_period.date_contol %></td>
+        <td><%= child_development_period.child_development_id %></td>
         <td><%= child_development_period.weight %></td>
         <td><%= child_development_period.size %></td>
         <td><%= child_development_period.head_circunference %></td>
-        <td><%= child_development_period.child_id %></td>
-        <td><%= child_development_period.child_development_id %></td>
-        <td><%= child_development_period.medical_center_id %></td>
-        <td><%= child_development_period.doctor_id %></td>
+        <td><%= child_development_period.doctor_name %></td>
+<!--
+        <td><%= child_development_period.child_name %></td>
+        <td><%= child_development_period.medical_center_name %></td>
         <td><%=l child_development_period.created_at %></td>
+-->
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_child_development_period_path(child_development_period), :class => 'btn btn-default btn-xs' %>

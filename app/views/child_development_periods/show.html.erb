@@ -4,6 +4,16 @@
 </div>
 
 <dl class="dl-horizontal">
+
+  <dt><strong><%= model_class.human_attribute_name(:medical_center_name) %>:</strong></dt>
+  <dd><%= @child_development_period.medical_center_name %></dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:doctor_name) %>:</strong></dt>
+  <dd><%= @child_development_period.doctor_name %></dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:child_name) %>:</strong></dt>
+  <dd><%= @child_development_period.child_name %></dd>
+
   <dt><strong><%= model_class.human_attribute_name(:date_contol) %>:</strong></dt>
   <dd><%= @child_development_period.date_contol %></dd>
   <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
@@ -12,14 +22,8 @@
   <dd><%= @child_development_period.size %></dd>
   <dt><strong><%= model_class.human_attribute_name(:head_circunference) %>:</strong></dt>
   <dd><%= @child_development_period.head_circunference %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:child_id) %>:</strong></dt>
-  <dd><%= @child_development_period.child_id %></dd>
   <dt><strong><%= model_class.human_attribute_name(:child_development_id) %>:</strong></dt>
   <dd><%= @child_development_period.child_development_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:medical_center_id) %>:</strong></dt>
-  <dd><%= @child_development_period.medical_center_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:doctor_id) %>:</strong></dt>
-  <dd><%= @child_development_period.doctor_id %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

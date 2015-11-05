@@ -69,6 +69,6 @@ class ChildDevelopmentPeriodsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def child_development_period_params
-      params.require(:child_development_period).permit(:date_contol, :weight, :size, :head_circunference, :Child_id, :Child_development_id, :Medical_center_id, :Doctor_id)
+      params.require(:child_development_period).permit(:date_contol, :weight, :size, :head_circunference, :child_id, :child_development_id, :medical_center_id, :doctor_id)
     end
 end

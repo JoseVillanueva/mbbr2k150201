@@ -7,17 +7,21 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:date_suggested) %></th>
+      <th><%= model_class.human_attribute_name(:vaccine_plan_id) %></th>
+      
       <th><%= model_class.human_attribute_name(:date_register) %></th>
       <th><%= model_class.human_attribute_name(:dosis_vacune) %></th>
+      <th><%= model_class.human_attribute_name(:medical_center_id) %></th>
+
+      <!--
       <th><%= model_class.human_attribute_name(:status) %></th>
       <th><%= model_class.human_attribute_name(:weight_picture) %></th>
       <th><%= model_class.human_attribute_name(:height_picture) %></th>
       <th><%= model_class.human_attribute_name(:type_picture) %></th>
       <th><%= model_class.human_attribute_name(:picture) %></th>
-      <th><%= model_class.human_attribute_name(:medical_center_id) %></th>
-      <th><%= model_class.human_attribute_name(:vaccine_plan_id) %></th>
       <th><%= model_class.human_attribute_name(:child_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
+      -->
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -26,17 +30,20 @@
       <tr>
         <td><%= link_to vaccine_child.id, vaccine_child_path(vaccine_child) %></td>
         <td><%= vaccine_child.date_suggested %></td>
+        <td><%= vaccine_child.vaccine_plan_id %></td>
         <td><%= vaccine_child.date_register %></td>
         <td><%= vaccine_child.dosis_vacune %></td>
+        <td><%= vaccine_child.medical_center_id %></td>
+
+<!--
         <td><%= vaccine_child.status %></td>
         <td><%= vaccine_child.weight_picture %></td>
         <td><%= vaccine_child.height_picture %></td>
         <td><%= vaccine_child.type_picture %></td>
         <td><%= vaccine_child.picture %></td>
-        <td><%= vaccine_child.medical_center_id %></td>
-        <td><%= vaccine_child.vaccine_plan_id %></td>
         <td><%= vaccine_child.child_id %></td>
         <td><%=l vaccine_child.created_at %></td>
+-->
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_vaccine_child_path(vaccine_child), :class => 'btn btn-default btn-xs' %>
