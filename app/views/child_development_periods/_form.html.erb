@@ -1,8 +1,8 @@
 <%= simple_form_for @child_development_period, :html => { :class => 'form-horizontal' } do |f| %>
 
-
   <%= f.association :medical_center %>
   <%= error_span(@child_development_period[:medical_center_id]) %>
+
 
   <%= f.association :doctor %>
   <%= error_span(@child_development_period[:doctor_id]) %>
@@ -25,4 +25,5 @@
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 child_development_periods_path, :class => 'btn btn-default' %>
+                
 <% end %>

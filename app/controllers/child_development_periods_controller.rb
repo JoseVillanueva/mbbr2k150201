@@ -71,4 +71,6 @@ class ChildDevelopmentPeriodsController < ApplicationController
     def child_development_period_params
       params.require(:child_development_period).permit(:date_contol, :weight, :size, :head_circunference, :child_id, :child_development_id, :medical_center_id, :doctor_id)
     end
+    
+    
 end
