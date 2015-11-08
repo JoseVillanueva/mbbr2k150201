@@ -1,5 +1,6 @@
 class Doctor < ActiveRecord::Base
     has_many    :children
+    has_many    :medical_histories
     belongs_to  :medical_center
     
     validates :name, presence:true,

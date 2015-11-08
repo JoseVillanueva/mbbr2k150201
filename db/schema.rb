@@ -128,7 +128,7 @@ ActiveRecord::Schema.define(version: 20151025040737) do
 
   create_table "medical_exams", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.string   "type",       limit: 255
+    t.string   "exam_type",  limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

@@ -6,4 +6,5 @@ class MedicalHistory < ActiveRecord::Base
   belongs_to :Doctor
   belongs_to :Child
   belongs_to :Health_problem
+  validates_presence_of :date_register, :description => "Campo Requerido"
 end

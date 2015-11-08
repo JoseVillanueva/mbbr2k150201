@@ -26,6 +26,8 @@
   <%= f.input :health_problem_id %>
   <%= error_span(@medical_history[:health_problem_id]) %>
 
+  <% fields_for(:doctors) do |f| %>
+
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 medical_histories_path, :class => 'btn btn-default' %>
